@@ -34,7 +34,6 @@ Traditional Visual SLAM systems, like ORB-SLAM2, rely solely on visual descripto
 
 - **Operating System**: Ubuntu 18.04 or later
 - **Python**: 3.6 or later
-- **C++ Compiler**: GCC 7.5 or later
 - **Libraries**:
   - OpenCV
   - Eigen3
@@ -52,17 +51,7 @@ Traditional Visual SLAM systems, like ORB-SLAM2, rely solely on visual descripto
    git clone https://github.com/annadurai-ka/Semantically_guided_slam.git
    cd Semantically_guided_slam
 
-
-2. **Build the Project**:
-
-   ```bash
-   mkdir build
-   cd build
-   cmake ..
-   make -j8
-   ```
-
-3. **Set Up Python Environment**:
+2. **Set Up Python Environment**:
 
    ```bash
    python3 -m venv venv
@@ -70,36 +59,28 @@ Traditional Visual SLAM systems, like ORB-SLAM2, rely solely on visual descripto
    pip install -r requirements.txt
    ```
 
+3. Run the full experiment:
+```bash
+python scripts/run_experiment.py
+```
+
    *Ensure that PyTorch is installed with CUDA support.*
+   *Make sure you also have OpenCV with Python bindings and PyTorch with CUDA support (if using GPU).*
 
 ## 📈 Usage
 
 1. **Prepare the Dataset**: Ensure that the dataset is organized as specified in the [Dataset Preparation](#dataset-preparation) section.
 
-2. **Run the System**:
-
-   ```bash
-   ./main <path_to_dataset>
-   ```
-
-   Replace `<path_to_dataset>` with the path to your dataset directory.
 
 ## 📂 Dataset Preparation
 
-Organize your dataset directory as follows:
-
+Prepare your dataset inside the `data/` directory:
 ```
-dataset/
-├── images/
-│   ├── frame_0001.png
-│   ├── frame_0002.png
-│   └── ...
-├── semantic_images/
-│   ├── frame_0001.png
-│   ├── frame_0002.png
-│   └── ...
-├── config.txt
-└── groundtruth.txt
+data/
+├── config.txt            # Contains camera intrinsics and feature params
+├── groundtruth.txt       # Ground-truth poses in TUM format
+├── images/               # Raw RGB or grayscale images
+└── semantic_images/      # Matching segmentation maps for each image
 ```
 
 - **images/**: Contains the RGB images.
@@ -116,6 +97,26 @@ The system was evaluated on sequences from the TUM RGB-D and KITTI datasets. Key
 - **Improved Feature Matching**: Semantic filtering reduced false matches, especially in dynamic scenes.
 - **Enhanced Trajectory Accuracy**: Slight improvements in rotation and translation RMSE were observed.
 - **Robust Loop Closure**: Semantic cues helped prevent false loop closures in visually similar but semantically different scenes.
+
+## 🎯 Output
+
+- Keypoint match visualizations: `results/vis/match_*.png`
+- Trajectory plot: `results/plots/trajectory_plot.png`
+- RMSE bar chart: `results/plots/rmse_plot.png`
+- GIF and video renderings: `results/plots/slam_replay.gif` / `.mp4`
+
+---
+
+## 📈 Evaluation Results
+
+| Dataset | Mode     | RMSE Rotation (°) | RMSE Translation (°) | Matches |
+|---------|----------|-------------------|-----------------------|---------|
+| TUM     | Normal   | 9.02              | 95.51                 | 148     |
+| TUM     | Semantic | 10.33             | 97.33                 | 153     |
+| KITTI   | Normal   | 37.18             | 99.44                 | 318     |
+| KITTI   | Semantic | 43.29             | 102.50                | 344     |
+
+---
 
 For detailed results and analysis, refer to the [report](report.pdf) included in this repository.
 
