@@ -164,6 +164,3 @@ Semantically_guided_slam/
 *For any queries or contributions, feel free to open an issue or submit a pull request.*
 ```
 
----
-
-Feel free to customize this README further to match any specific details or updates related to your project. 
