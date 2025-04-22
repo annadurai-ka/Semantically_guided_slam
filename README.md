@@ -1,7 +1,7 @@
 
 # Semantically Guided Feature Matching for Visual SLAM
 
-![Project Banner](assets/architecture_diagram.png)
+![Project Banner](architecture_diagram.png)
 
 This repository contains the implementation of a semantically guided feature matching method for Visual SLAM, enhancing the traditional ORB-SLAM2 pipeline by integrating semantic information into the feature matching process. By leveraging semantic segmentation, the system aims to improve feature correspondence accuracy, especially in dynamic or ambiguous environments.
 
