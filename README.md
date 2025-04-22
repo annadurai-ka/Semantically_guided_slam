@@ -123,22 +123,36 @@ For detailed results and analysis, refer to the [report](report.pdf) included in
 
 ```
 Semantically_guided_slam/
-├── assets/
-│   └── architecture_diagram.png
-├── build/
-├── src/
-│   ├── main.cpp
-│   ├── semantic_descriptor.cpp
-│   └── ...
-├── scripts/
-│   └── run_segmentation.py
-├── datasets/
-│   └── ...
-├── report.pdf
+├── data/                    # Input images, ground truth, and segmentation labels
+│   ├── config.txt
+│   ├── groundtruth.txt
+│   ├── images/
+│   └── semantic_images/
+├── results/                 # Visual and quantitative results
+│   ├── plots/               # RMSE plots, trajectory comparisons
+│   └── vis/                 # Visualizations of keypoint matches
+├── scripts/                # Main runner + visualization generators
+│   ├── run_experiment.py
+│   ├── generate_gif.py
+│   ├── generate_video.py
+│   ├── generate_semantic_mask.py
+│   ├── semantic_segmentation.py
+│   └── orb_feature_extraction.py
+├── utils/                  # Supporting modules
+│   ├── config_parser.py
+│   ├── data_loader.py
+│   ├── frame.py
+│   ├── matcher.py
+│   ├── metrics.py
+│   ├── pose_estimator.py
+│   ├── trajectory_logger.py
+│   └── visualizer.py
+├── Keypoints_screenshot_10.04.2025.png
+├── architecture_diagram.png
 ├── requirements.txt
-├── CMakeLists.txt
 └── README.md
 ```
+
 
 - **assets/**: Contains images and diagrams.
 - **build/**: Directory for build files.
