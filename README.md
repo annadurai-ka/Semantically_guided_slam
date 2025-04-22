@@ -1,4 +1,4 @@
-```markdown
+
 # Semantically Guided Feature Matching for Visual SLAM
 
 ![Project Banner](assets/architecture_diagram.png)
@@ -51,7 +51,7 @@ Traditional Visual SLAM systems, like ORB-SLAM2, rely solely on visual descripto
    ```bash
    git clone https://github.com/annadurai-ka/Semantically_guided_slam.git
    cd Semantically_guided_slam
-   ```
+
 
 2. **Build the Project**:
 
