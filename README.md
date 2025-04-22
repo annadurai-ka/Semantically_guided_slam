@@ -16,7 +16,6 @@ This repository contains the implementation of a semantically guided feature mat
 - [Results](#results)
 - [Project Structure](#project-structure)
 - [Acknowledgements](#acknowledgements)
-- [License](#license)
 
 ## 📌 Overview
 
@@ -154,14 +153,6 @@ Semantically_guided_slam/
 ```
 
 
-- **assets/**: Contains images and diagrams.
-- **build/**: Directory for build files.
-- **src/**: C++ source code.
-- **scripts/**: Python scripts for preprocessing and segmentation.
-- **datasets/**: Sample datasets for testing.
-- **report.pdf**: Detailed project report.
-- **requirements.txt**: Python dependencies.
-
 ## 🙏 Acknowledgements
 
 - [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2)
@@ -169,12 +160,6 @@ Semantically_guided_slam/
 - [SuperPoint](https://github.com/magicleap/SuperPointPretrainedNetwork)
 - [TUM RGB-D Dataset](https://vision.in.tum.de/data/datasets/rgbd-dataset)
 - [KITTI Dataset](http://www.cvlibs.net/datasets/kitti/)
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
 
 *For any queries or contributions, feel free to open an issue or submit a pull request.*
 ```
