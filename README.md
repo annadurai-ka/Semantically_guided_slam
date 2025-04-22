@@ -162,5 +162,4 @@ Semantically_guided_slam/
 - [KITTI Dataset](http://www.cvlibs.net/datasets/kitti/)
 
 *For any queries or contributions, feel free to open an issue or submit a pull request.*
-```
 
