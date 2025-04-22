@@ -161,6 +161,7 @@ Semantically_guided_slam/
 - [SuperPoint](https://github.com/magicleap/SuperPointPretrainedNetwork)
 - [TUM RGB-D Dataset](https://vision.in.tum.de/data/datasets/rgbd-dataset)
 - [KITTI Dataset](http://www.cvlibs.net/datasets/kitti/)
+- - Original research: [Semantically Guided Feature Matching for Visual SLAM](https://github.com/oguzhanilter/Semantically-Guided-Feature-Matching-for-Visual-SLAM)
 
 *For any queries or contributions, feel free to open an issue or submit a pull request.*
 
