@@ -64,8 +64,7 @@ Traditional Visual SLAM systems, like ORB-SLAM2, rely solely on visual descripto
 python scripts/run_experiment.py
 ```
 
-   *Ensure that PyTorch is installed with CUDA support.*
-   *Make sure you also have OpenCV with Python bindings and PyTorch with CUDA support (if using GPU).*
+   *Ensure that PyTorch is installed with CUDA support and make sure you also have OpenCV with Python bindings and PyTorch with CUDA support (if using GPU).*
 
 ## 📈 Usage
 
